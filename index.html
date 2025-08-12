@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaooNet - Digital Marketing Experts</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .active {
+        position: relative;
+      }
+      .active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px; /* Adjust the height of the line */
+        background-color: white; /* Change to your desired color */
+        position: absolute;
+        bottom: -5px; /* Adjust the position of the line */
+        left: 0;
+      }
+      .service-card {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .service-card:hover {
+        background: #5d64c0;
+        background: linear-gradient(
+          90deg,
+          rgba(93, 100, 192, 1) 0%,
+          rgba(93, 100, 192, 1) 50%,
+          rgba(62, 66, 127, 1) 100%
+        );
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+      }
+
+      .service-card:hover .card-content * {
+        color: white !important;
+      }
+
+      .service-card:hover .card-number {
+        color: white !important;
+        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3) !important;
+      }
+
+      .service-card:hover .icon-bg {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      .service-card:hover .read-more-text,
+      .service-card:hover .read-more-arrow {
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen text-white font-sans bg-[linear-gradient(90deg,_rgba(37,41,79,1)_0%,_rgba(28,15,51,1)_39%,_rgba(25,11,44,1)_69%,_rgba(18,10,78,1)_100%,_rgba(32,5,56,1)_100%)]"
+  >
+    <!-- Top Bar -->
+    <div
+      class="bg-white py-2 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between text-sm text-[rgb(53_57_109)]"
+    >
+      <div
+        class="flex flex-col md:flex-row items-center gap-2 md:gap-6 mb-2 md:mb-0"
+      >
+        <div class="flex items-center gap-1">
+          <!-- Phone Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            />
+          </svg>
+          <span class="text-base">+1 (647) 936-8001</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <!-- Email Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <span class="text-base">info@waoonet.com</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-base">Follow our social media:</span>
+        <div class="flex gap-3">
+          <svg
+            class="cursor-pointer hover:text-gray-300"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </svg>
+          <svg
+            class="cursor-pointer hover:text-gray-300"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.5" y1="6.5" y2="6.5" />
+          </svg>
+          <svg
+            class="cursor-pointer hover:text-gray-300"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="4" />
+            <line x1="2.1" x2="14.1" y1="12" y2="12" />
+            <line x1="10.85" x2="21.9" y1="5.83" y2="11.67" />
+            <line x1="10.85" x2="21.9" y1="18.17" y2="12.33" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-custom-gradient py-4 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between shadow-lg"
+    >
+      <div class="flex items-center mb-4 md:mb-0">
+        <img
+          src="/pics/index-img/waoonet-logo.webp"
+          alt="WaooNet Logo"
+          width="128"
+          height="40"
+          class="h-10 w-auto"
+        />
+      </div>
+      <ul
+        class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-lg font-medium mb-4 md:mb-0 relative"
+        style="font-family: 'Hanken Grotesk', sans-serif"
+      >
+        <li>
+          <a
+            href="#"
+            class="hover:text-gray-300 transition-colors duration-200 active"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
+            >About us</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
+            >Blog</a
+          >
+        </li>
+      </ul>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button
+          class="bg-transparent text-white font-hanken grotesk py-2 px-5 rounded-md transition-colors duration-200 border border-white"
+        >
+          Free Consultation
+        </button>
+        <button
+          class="bg-[#4b4a96] hover:bg-[#6b6ab3] text-white font-hanken grotesk rounded-md transition-colors duration-200 py-[12px] px-[16px] shadow-[0_0_10px_#6b6ab3] hover:shadow-[0_0_15px_#6b6ab3]"
+        >
+          Contact Now
+        </button>
+      </div>
+    </nav>
+    <div class="w-full h-[1px] bg-white"></div>
+
+    <!-- Hero Section -->
+    <main
+      class="relative max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-24 flex flex-col lg:flex-row items-center justify-between gap-12 w-full"
+    >
+      <!-- Left Content -->
+      <div class="flex-1 max-w-2xl text-center lg:text-left">
+        <span
+          class="inline-block bg-[#3c3e7b] text-white font-medium px-4 py-2 rounded-full mb-6 text-[24px]"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          Web Development and Digital Marketing Agency
+        </span>
+
+        <h1
+          class="font-bold leading-tight mb-6 text-[46px]"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          Your Digital <br class="hidden md:block" />
+          Marketing Experts
+        </h1>
+
+        <p
+          class="text-base md:text-lg text-gray-300 mb-8"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          At WaooNet, we use digital tools to elevate your brand and drive
+          growth. With expertise in web and mobile development, social media
+          management, content creation, SEO, and targeted advertising, we boost
+          engagement and visibility. Partner with WaooNet and watch your brand
+          thrive.
+        </p>
+        <button
+          class="bg-[#4d4a99] text-white font-semibold py-3 px-8 rounded-md text-lg transition-colors duration-200 shadow-[0_0_10px_#6b6ab3]"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          SCHEDULE APPOINTMENT
+        </button>
+      </div>
+
+      <!-- Right Illustration -->
+      <div class="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0">
+        <img
+          src="/pics/index-img/hero-img.png"
+          alt="Laptop with files and magnifying glass illustration"
+          width="600"
+          height="400"
+          class="max-w-full h-auto"
+        />
+      </div>
+    </main>
+
+    <section class="w-full py-12 md:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12 md:mb-16 relative">
+          <h2 class="font-bold mb-4" style="color: #6471c8; font-size: 48px">
+            Our Services
+          </h2>
+
+          <p class="text-[30px] text-gray-600 whitespace-nowrap">
+            Empowering Your Business with tailored digital solutions
+          </p>
+
+          <img
+            src="/pics/index-img/pencil.png"
+            alt="Decorative pencil icon"
+            width="144"
+            height="160"
+            class="absolute top-0 right-0 -mt-8 mr-4 opacity-70 hidden md:block"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <!-- Service Card 01 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              01
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="Web Design Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Web Design & Development
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                We create innovative, responsive, and dynamic websites that
+                reflect your brand,...
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+
+          <!-- Service Card 02 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              02
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="Brand Development Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Brand Development
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                Crafting unique and memorable brand identities to elevate your
+                business
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+
+          <!-- Service Card 03 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              03
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="Mobile App Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Mobile App Development
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                It is a long established fact desins that a reader will be
+                distracted thats by the...
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+
+          <!-- Service Card 04 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              04
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="SEO Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Search Engine Optimization
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                SEO boosts your website'ssearch engine visibility, driving
+                higher rankings and more..
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+
+          <!-- Service Card 05 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              05
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="Digital Marketing Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Digital Marketing
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                It is a long established fact desins that a reader will be
+                distracted thats by the..
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+
+          <!-- Service Card 06 -->
+          <div
+            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
+          >
+            <div
+              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
+              style="color: white; -webkit-text-stroke: 1.5px gray"
+            >
+              06
+            </div>
+
+            <div class="card-content relative z-10">
+              <div
+                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
+              >
+                <img
+                  src="/pics/index-img/img-2.png"
+                  alt="Social Media Icon"
+                  class="w-12 h-12 transition-transform"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
+                style="font-family: 'Hanken Grotesk', sans-serif"
+              >
+                Social Media Marketing & Management
+              </h3>
+
+              <p
+                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
+              >
+                It is a long established fact desins that a reader will be...
+              </p>
+              <a
+                href="#"
+                class="flex items-center gap-1 font-medium group-hover:underline"
+              >
+                <span
+                  class="read-more-text text-[#555e81] transition-colors duration-300"
+                  >Read More</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <img
+              src="/pics/index-img/imgi_3_union.png"
+              alt=""
+              width="112"
+              height="112"
+              class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
+            />
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            class="px-48 py-[28px] text-[24px] rounded-lg border border-gray-300 hover:bg-gray-50 bg-transparent font-medium"
+            style="font-family: 'Hanken Grotesk', sans-serif; color: #5e66c2"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="py-12" style="background-color: #f0f0fc">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10 px-6"
+      >
+        <!-- Left Container -->
+        <div class="flex-1 flex justify-start">
+          <img
+            src="/pics/index-img/ceo.jpg"
+            alt="CEO"
+            style="width: 440px; height: 440px; object-fit: cover"
+          />
+        </div>
+
+        <!-- Right Container -->
+        <div class="flex-1 relative">
+          <!-- Label -->
+          <span
+            class="inline-block text-white text-sm font-medium px-4 py-1 rounded-full mb-4"
+            style="background-color: #464b8f"
+          >
+            Our Mission
+          </span>
+
+          <!-- Heading -->
+          <h2
+            class="text-3xl md:text-4xl font-bold leading-snug"
+            style="font-family: 'Hanken Grotesk', sans-serif"
+          >
+            <span style="color: #383a6f">Amazing Design,</span>
+            <span style="color: #676dcd"> Quality Solution,</span>
+            <span style="color: #383a6f"
+              ><br />
+              Reliable Service</span
+            >
+          </h2>
+
+          <!-- Mission Paragraph -->
+          <p class="mt-4 leading-relaxed" style="color: #797e88">
+            Our mission is to empower your business with personalized digital
+            solutions that drive growth and enhance brand visibility. We are
+            dedicated to helping you succeed in the digital landscape and
+            achieve your business goals.
+          </p>
+
+          <!-- CEO Message -->
+          <h3 class="mt-6 text-xl font-semibold" style="color: #6872cd">
+            CEO Message
+          </h3>
+          <p class="mt-2 leading-relaxed text-base" style="color: #797e88">
+            At WaooNet, we believe in working with you as a partner and not just
+            as a client.<br />
+            Our talented team works closely with you to create a powerful Brand
+            Voice that<br />
+            truly resonates with your audience. We are committed to delivering
+            amazing<br />
+            designs, quality solutions, and consistent service that inspire
+            lifelong success. Let<br />
+            us help you build a brand that connects with your customers and
+            drives lasting<br />
+            growth.
+          </p>
+
+          <!-- Decorative Logo -->
+          <div class="relative w-full h-full">
+            <img
+              src="/pics/index-img/imgi_6_ceo-section-union.png"
+              alt="Decoration"
+              class="opacity-60 absolute right-0"
+              style="width: 152px; height: 160px; top: -80px"
+            />
+          </div>
+
+          <!-- Button -->
+
+          <div class="relative w-full h-full">
+            <button
+              class="inline-flex items-center font-medium px-5 py-2 rounded-md hover:bg-indigo-50 transition opacity-60 absolute right-0"
+              style="color: #6e7cd0; border: 1px solid #6e7cd0"
+            >
+              Meet my Team
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-2 w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#6e7cd0"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 7l-10 10m0 0h7m-7 0V10"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
