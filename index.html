@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .active {
         position: relative;
@@ -795,7 +795,7 @@
       </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-6 py-10 bg-white">
+    <div class="w-full px-6 py-10 bg-white">
       <!-- Heading and button container -->
       <div
         class="flex justify-between items-center mb-8"
@@ -828,44 +828,127 @@
           </svg>
         </button>
       </div>
-
-      <!-- Parent container -->
-      <div class="flex gap-6">
-        <!-- Left div: large image -->
-        <div class="flex-1">
+      <!-- Parent container with grid layout ----------------------------------------------------------->
+      <!-- Parent container with grid layout -->
+      <div class="grid grid-cols-3 gap-6">
+        <!-- Left column (Image 7) -->
+        <div class="relative group">
           <img
             src="/pics/index-img/imgi_7_image.webp"
-            alt="Large Left"
-            class="w-full h-full object-cover rounded-md"
+            alt="Image 7"
+            class="w-full h-[673px] object-cover rounded-md"
           />
+          <div
+            class="absolute inset-0 flex items-center justify-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="
+              background: linear-gradient(
+                90deg,
+                rgba(173, 173, 192, 0.6) 0%,
+                rgba(129, 131, 162, 0.6) 50%,
+                rgba(111, 114, 151, 0.6) 100%
+              );
+            "
+          >
+            <p class="text-lg font-semibold">
+              Our Website Projects: An Emerging Online Shopping Hub
+            </p>
+          </div>
         </div>
 
-        <!-- Right div: split into two equal parts -->
-        <div class="flex-1 flex flex-col gap-6">
-          <div class="flex h-32 overflow-hidden rounded-md">
-            <img
-              src="/pics/index-img/imgi_21_image.webp"
-              alt="Top Right 1"
-              style="width: 281px; height: 320px; object-fit: cover"
-            />
+        <!-- Right section with Image 21, 22, and 11 -->
+        <div class="grid grid-rows-2 gap-6 col-span-2">
+          <!-- Row 1: Image 21 and Image 22 side by side -->
+          <div class="flex gap-6">
+            <!-- Image 21 -->
+            <div class="relative group flex-1">
+              <img
+                src="/pics/index-img/imgi_21_image.webp"
+                alt="Image 21"
+                class="w-full h-[320px] object-cover rounded-md"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(173, 173, 192, 0.6) 0%,
+                    rgba(129, 131, 162, 0.6) 50%,
+                    rgba(111, 114, 151, 0.6) 100%
+                  );
+                "
+              >
+                <p class="text-lg font-semibold">Dynamic Text for Image 21</p>
+              </div>
+            </div>
 
-            <img
-              src="/pics/index-img/imgi_22_image.webp"
-              alt="Top Right 2"
-              style="width: 281px; height: 320px; object-fit: cover"
-            />
+            <!-- Image 22 -->
+            <div class="relative group flex-1">
+              <img
+                src="/pics/index-img/imgi_22_image.webp"
+                alt="Image 22"
+                class="w-full h-[320px] object-cover rounded-md"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(173, 173, 192, 0.6) 0%,
+                    rgba(129, 131, 162, 0.6) 50%,
+                    rgba(111, 114, 151, 0.6) 100%
+                  );
+                "
+              >
+                <p class="text-lg font-semibold">
+                  Our Website Projects: Marketplace Connecting Buyers & Products
+                </p>
+              </div>
+            </div>
           </div>
 
-          <!-- Bottom image full width -->
-          <div class="flex-1">
+          <!-- Row 2: Image 11 under Image 21 and 22 -->
+          <div class="relative group">
             <img
               src="/pics/index-img/imgi_11_image.webp"
-              alt="Bottom Right"
-              class="w-[578px] h-[333px] object-cover rounded-md"
+              alt="Image 11"
+              class="w-full h-[333px] object-cover rounded-md"
             />
+            <div
+              class="absolute inset-0 text-white flex items-center justify-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  rgba(173, 173, 192, 0.6) 0%,
+                  rgba(129, 131, 162, 0.6) 50%,
+                  rgba(111, 114, 151, 0.6) 100%
+                );
+              "
+            >
+              <p class="text-lg font-semibold">
+                Dynamic Text for Bottom Full Image
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <script>
+        // Select all containers with overlays
+        document.querySelectorAll(".group").forEach((container) => {
+          const overlay = container.querySelector("div");
+          const textEl = container.querySelector("p");
+          const dynamicText = container.getAttribute("data-text");
+
+          container.addEventListener("mouseenter", () => {
+            textEl.textContent = dynamicText;
+            overlay.style.opacity = "1";
+          });
+
+          container.addEventListener("mouseleave", () => {
+            overlay.style.opacity = "0";
+          });
+        });
+      </script>
     </div>
   </body>
 </html>
