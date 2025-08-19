@@ -24,39 +24,25 @@
         bottom: -5px; /* Adjust the position of the line */
         left: 0;
       }
-      .service-card {
-        transition: all 0.3s ease-in-out;
-      }
-
-      .service-card:hover {
-        background: #5d64c0;
-        background: linear-gradient(
-          90deg,
-          rgba(93, 100, 192, 1) 0%,
-          rgba(93, 100, 192, 1) 50%,
-          rgba(62, 66, 127, 1) 100%
-        );
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-      }
-
-      .service-card:hover .card-content * {
-        color: white !important;
-      }
-
-      .service-card:hover .card-number {
-        color: white !important;
-        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3) !important;
-      }
-
-      .service-card:hover .icon-bg {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-      }
-
-      .service-card:hover .read-more-text,
-      .service-card:hover .read-more-arrow {
-        color: white !important;
-      }
+       .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            background: linear-gradient(135deg,#494f97 100%);
+        }
+        .card-hover:hover .card-text {
+            color: white;
+        }
+        .card-hover:hover .card-number {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .card-hover:hover .read-more-btn {
+            border-color: white;
+            color: white;
+        }
+        .card-hover:hover .icon-bg {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
     </style>
   </head>
   <body
@@ -131,37 +117,26 @@
         />
       </div>
       <ul
-        class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-lg font-medium mb-4 md:mb-0 relative"
-        style="font-family: 'Hanken Grotesk', sans-serif"
-      >
-        <li>
-          <a
-            href="#"
-            class="hover:text-gray-300 transition-colors duration-200 active"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
-            >About us</a
-          >
-        </li>
-        <li>
-          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
-            >Services</a
-          >
-        </li>
-        <li>
-          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
-            >Portfolio</a
-          >
-        </li>
-        <li>
-          <a href="#" class="hover:text-gray-300 transition-colors duration-200"
-            >Blog</a
-          >
-        </li>
-      </ul>
+  class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-lg font-medium mb-4 md:mb-0 relative"
+  style="font-family: 'Hanken Grotesk', sans-serif"
+>
+  <li>
+    <a href="index.html" class="hover:text-gray-300 transition-colors duration-200 active">Home</a>
+  </li>
+  <li>
+    <a href="aboutus.html" class="hover:text-gray-300 transition-colors duration-200">About us</a>
+  </li>
+  <li>
+    <a href="services.html" class="hover:text-gray-300 transition-colors duration-200">Services</a>
+  </li>
+  <li>
+    <a href="portfolio.html" class="hover:text-gray-300 transition-colors duration-200">Portfolio</a>
+  </li>
+  <li>
+    <a href="blog.html" class="hover:text-gray-300 transition-colors duration-200">Blog</a>
+  </li>
+</ul>
+
       <div class="flex flex-col sm:flex-row gap-3">
         <button
           class="bg-transparent text-white font-hanken grotesk py-2 px-5 rounded-md transition-colors duration-200 border border-white"
@@ -228,16 +203,16 @@
       </div>
     </main>
 
-    <section class="w-full py-12 md:py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12 md:mb-16 relative">
-          <h2 class="font-bold mb-4" style="color: #6471c8; font-size: 48px">
-            Our Services
-          </h2>
+  <section class="w-full py-12 md:py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 md:mb-16 relative">
+      <h2 class="font-bold mb-4 text-3xl md:text-5xl text-[#6471c8]">
+        Our Services
+      </h2>
 
-          <p class="text-[30px] text-gray-600 whitespace-nowrap">
-            Empowering Your Business with tailored digital solutions
-          </p>
+      <p class="text-lg md:text-2xl text-gray-600">
+        Empowering Your Business with tailored digital solutions
+      </p>
 
           <img
             src="/pics/index-img/pencil.png"
@@ -248,412 +223,198 @@
           />
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <!-- Service Card 01 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              01
-            </div>
+          
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          style="font-family: 'Hanken Grotesk', sans-serif;">
+            
+            <!-- Card 1: Web Design & Development -->
+            <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+  <img 
+    src="/pics/index-img/img-2.png" 
+    alt="Web Design Icon" 
+    class="w-8 h-8 object-contain"
+  />
+</div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
-                <img
-                  src="/pics/index-img/img-2.png"
-                  alt="Web Design Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Web Design & Development
-              </h3>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">01</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Web Design & Development</h3>
+                <p class="card-text text-base text-gray-600 mb-6 leading-relaxed transition-colors duration-300">
+                We create innovative, responsive, and dynamic websites  reflect your brand..
+                </p>
 
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                We create innovative, responsive, and dynamic websites that
-                reflect your brand,...
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300 mt-2">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                  <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-
-          <!-- Service Card 02 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              02
             </div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
-                <img
-                  src="/pics/index-img/img-2.png"
-                  alt="Brand Development Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Brand Development
-              </h3>
-
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                Crafting unique and memorable brand identities to elevate your
-                business
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
+            <!-- Card 2: Brand Development -->
+            <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+  <img 
+    src="/pics/index-img/img-2.png" 
+    alt="Web Design Icon" 
+    class="w-8 h-8 object-contain"
+  />
+</div>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">02</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Brand Development</h3>
+                <p class="card-text text-gray-600 mb-6 leading-relaxed transition-colors duration-300">Crafting unique and memorable brand identities to elevate your business</p>
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                 <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-
-          <!-- Service Card 03 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              03
             </div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
+            <!-- Card 3: Mobile App Development -->
+            <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+  <img 
+    src="/pics/index-img/img-2.png" 
+    alt="Web Design Icon" 
+    class="w-8 h-8 object-contain"
+  />
+</div>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">03</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Mobile App Development</h3>
+                <p class="card-text text-gray-600 mb-6 leading-relaxed transition-colors duration-300">It is a long established fact desins that a reader be
+                distracted thats by the...</p>
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <img
-                  src="/pics/index-img/img-2.png"
-                  alt="Mobile App Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Mobile App Development
-              </h3>
-
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                It is a long established fact desins that a reader will be
-                distracted thats by the...
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-
-          <!-- Service Card 04 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              04
             </div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
+            <!-- Card 4: Search Engine Optimization -->
+            <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+  <img 
+    src="/pics/index-img/img-2.png" 
+    alt="Web Design Icon" 
+    class="w-8 h-8 object-contain"
+  />
+</div>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">04</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Search Engine Optimization</h3>
+                <p class="card-text text-gray-600 mb-6 leading-relaxed transition-colors duration-300">SEO boosts your website'search engine visibility, driving
+                higher rankings more...</p>
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <img
-                  src="/pics/index-img/img-2.png"
-                  alt="SEO Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Search Engine Optimization
-              </h3>
-
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                SEO boosts your website'ssearch engine visibility, driving
-                higher rankings and more..
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-
-          <!-- Service Card 05 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              05
             </div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
+            <!-- Card 5: Digital Marketing -->
+             <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+                    <img 
+                    src="/pics/index-img/img-2.png" 
+                    alt="Web Design Icon" 
+                   class="w-8 h-8 object-contain"
+                    />
+                  </div>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">05</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Digital Marketing</h3>
+                <p class="card-text text-gray-600 mb-6 leading-relaxed transition-colors duration-300">It is a long established fact desins that a reader  be
+                distracted thats by the...</p>
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <img
-                  src="/pics/index-img/img-2.png"
-                  alt="Digital Marketing Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Digital Marketing
-              </h3>
-
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                It is a long established fact desins that a reader will be
-                distracted thats by the..
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-
-          <!-- Service Card 06 -->
-          <div
-            class="service-card relative p-6 rounded-lg border border-gray-100 bg-white overflow-hidden group cursor-pointer"
-          >
-            <div
-              class="card-number absolute top-0 right-0 text-9xl font-bold opacity-50 z-0 pointer-events-none transition-all duration-300"
-              style="color: white; -webkit-text-stroke: 1.5px gray"
-            >
-              06
             </div>
 
-            <div class="card-content relative z-10">
-              <div
-                class="icon-bg w-20 h-20 rounded-full bg-[#d9daf6] flex items-center justify-center p-2 mb-4 transition-all duration-300"
-              >
+            <!-- Card 6: Social Media Marketing & Management -->
+            <div class="card-hover bg-white  p-8 shadow-lg relative overflow-hidden">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="icon-bg bg-[#d9daf8] rounded-full p-4 transition-colors duration-300">
+                    <img 
+                      src="/pics/index-img/img-2.png" 
+                      alt="Web Design Icon" 
+                      class="w-8 h-8 object-contain"
+                    />
+                  </div>
+                    <span class="card-number text-8xl font-bold text-gray-200 transition-colors duration-300">06</span>
+                </div>
+                <h3 class="card-text text-xl font-bold text-[#6b6fbc] mb-4 transition-colors duration-300">Social Media Marketing & Management</h3>
+                <p class="card-text text-gray-600 mb-6 leading-relaxed transition-colors duration-300"> It is a long established fact desins that a reader will be...</p>
+                <a href="#" class="read-more-btn inline-flex items-center text-[#6b6fbc] font-semibold border-2 border-transparent rounded-lg px-4 py-2 transition-all duration-300">
+                    Read More 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <img
-                  src="/pics/index-img/img-2.png"
-                  alt="Social Media Icon"
-                  class="w-12 h-12 transition-transform"
-                />
-              </div>
-              <h3
-                class="text-xl font-semibold mt-20 mb-2 text-[#6b6ec7] transition-colors duration-300"
-                style="font-family: 'Hanken Grotesk', sans-serif"
-              >
-                Social Media Marketing & Management
-              </h3>
-
-              <p
-                class="text-gray-600 text-base mb-4 line-clamp-3 transition-colors duration-300"
-              >
-                It is a long established fact desins that a reader will be...
-              </p>
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium group-hover:underline"
-              >
-                <span
-                  class="read-more-text text-[#555e81] transition-colors duration-300"
-                  >Read More</span
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="read-more-arrow w-4 h-4 text-[#555e81] transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <img
               src="/pics/index-img/imgi_3_union.png"
               alt=""
               width="112"
               height="112"
               class="absolute bottom-0 right-0 w-24 h-24 opacity-50 pointer-events-none"
             />
-          </div>
-        </div>
+            </div>
 
-        <div class="text-center">
-          <button
-            class="px-48 py-[28px] text-[24px] rounded-lg border border-gray-300 hover:bg-gray-50 bg-transparent font-medium"
-            style="font-family: 'Hanken Grotesk', sans-serif; color: #5e66c2"
-          >
-            View All
-          </button>
-        </div>
+      
       </div>
+            <div class="text-center w-full pt-10">
+      <button class="px-8 sm:px-20 py-3 sm:py-4 text-base sm:text-xl rounded-lg border border-gray-300 hover:bg-gray-50 bg-transparent font-medium text-[#5e66c2]">
+        View All
+      </button>
+    </div>
     </section>
     <section class="py-12" style="background-color: #f0f0fc">
       <div
@@ -1177,14 +938,26 @@ An Emerging Online Shopping Hub: A Marketplace Connecting Buyers to Products<br>
     </div>
 
     <!-- Left Arrow -->
-    <button onclick="moveSlide(-1)" class="absolute top-1/2 -left-0 transform -translate-y-1/2 bg-gray-200 hover:bg-[#6a6dcf] hover:text-white text-gray-800 rounded-full p-6 shadow-md">
-      ‹
-    </button>
+   <!-- Left Arrow -->
+<button onclick="moveSlide(-1)" 
+        class="absolute top-1/2 -left-0 transform -translate-y-1/2 bg-gray-200 hover:bg-[#6a6dcf] rounded-full p-4 shadow-md flex items-center justify-center">
+  <img 
+    src="/pics/index-img/imgi_47_default.png" 
+    alt="Left Arrow" 
+    class="w-5 h-5"
+  />
+</button>
 
-    <!-- Right Arrow -->
-    <button onclick="moveSlide(1)" class="absolute top-1/2 -right-0 transform -translate-y-1/2 bg-gray-200 hover:bg-[#6a6dcf] hover:text-white text-gray-800 rounded-full p-6 shadow-md">
-      ›
-    </button>
+<!-- Right Arrow -->
+<button onclick="moveSlide(1)" 
+        class="absolute top-1/2 -right-0 transform -translate-y-1/2 bg-gray-200 hover:bg-[#6a6dcf] rounded-full p-4 shadow-md flex items-center justify-center">
+  <img 
+    src="/pics/index-img/imgi_48_default.png" 
+    alt="Right Arrow" 
+    class="w-5 h-5"
+  />
+</button>
+
   </div>
 </section>
 
@@ -1260,9 +1033,9 @@ An Emerging Online Shopping Hub: A Marketplace Connecting Buyers to Products<br>
         </div>
 
         <!-- Button -->
-        <button class="bg-[#666ed3] text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">
-          SCHEDULE APPOINTMENT
-        </button>
+        <button class="bg-[#666ed3] text-white text-sm px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition max-w-[280px]">
+  SCHEDULE APPOINTMENT
+</button>
 
         <!-- Social Icons -->
         <div class="flex items-center space-x-4 mt-6">
