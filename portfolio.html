@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaooNet - Digital Marketing Experts | About Us</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active {
+        position: relative;
+      }
+      .active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px; /* Adjust the height of the line */
+        background-color: white; /* Change to your desired color */
+        position: absolute;
+        bottom: -5px; /* Adjust the position of the line */
+        left: 0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white font-sans bg-white">
+    <section
+      class="w-full h-[340px] bg-cover bg-center relative"
+      style="
+        background-image: url('/pics/portfolio-img/imgi_45_pages-hero-bg.png');
+      "
+    >
+      <!-- Navigation Bar -->
+      <nav
+        class="bg-custom-gradient py-4 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between shadow-lg relative z-50"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <img
+            src="/pics/portfolio-img/imgi_21_image.png"
+            alt="WaooNet Logo"
+            width="128"
+            height="40"
+            class="h-10 w-auto"
+          />
+        </div>
+        <ul
+          class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-lg font-medium mb-4 md:mb-0 relative"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-gray-300 transition-colors duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="aboutus.html"
+              class="hover:text-gray-300 transition-colors duration-200"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="hover:text-gray-300 transition-colors duration-200"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="portfolio.html"
+              class="hover:text-gray-300 transition-colors duration-200 active"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="hover:text-gray-300 transition-colors duration-200"
+              >Blog</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button
+            class="bg-transparent text-white font-hanken-grotesk py-2 px-5 rounded-md transition-colors duration-200 border border-white"
+          >
+            Free Consultation
+          </button>
+          <button
+            class="bg-[#4b4a96] hover:bg-[#6b6ab3] text-white font-hanken-grotesk rounded-md transition-colors duration-200 py-[12px] px-[16px] shadow-[0_0_10px_#6b6ab3] hover:shadow-[0_0_15px_#6b6ab3]"
+          >
+            Contact Now
+          </button>
+        </div>
+      </nav>
+      <!-- Divider -->
+      <div class="w-full h-[1px] bg-white"></div>
+
+      <!-- Hero Image on the right -->
+      <div class="w-full flex justify-end p-10 relative z-10">
+        <img
+          src="/pics/portfolio-img/imgi_2_project-hero-img.png"
+          alt="Hero Image"
+          class="h-auto w-auto"
+        />
+      </div>
+
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-bold text-white mb-4"
+          style="font-family: 'Hanken Grotesk', sans-serif"
+        >
+          Our Portfolio
+        </h1>
+        <div class="flex items-center space-x-2 text-white font-medium">
+          <a
+            href="index.html"
+            class="hover:underline transition-colors duration-300"
+            >Home</a
+          >
+          <span>→</span>
+          <a
+            href="portfolio.html"
+            class="hover:underline transition-colors duration-300"
+            >Portfolio</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto mb-[50px] mt-[20px] px-[20px]">
+      <!-- Header with Tabs -->
+      <div class="flex justify-between items-start mb-12">
+        <div>
+          <h1 class="text-5xl font-bold text-gray-800 leading-tight">
+            Embracing the Future of<br />
+            <span class="text-indigo-500">Our Work</span>
+          </h1>
+        </div>
+        <div class="flex gap-4">
+          <button
+            id="webProjectsTab"
+            class="px-6 py-3 bg-indigo-500 text-white rounded-lg font-medium transition-colors hover:bg-indigo-600"
+          >
+            Web Projects
+          </button>
+          <button
+            id="caseStudiesTab"
+            class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-300"
+          >
+            Case Studies
+          </button>
+        </div>
+      </div>
+
+      <!-- Web Projects Content -->
+      <div
+        id="webProjectsContent"
+        class="grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        <!-- Project 1 - Shokz -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-[#e5e5e7] p-4">
+            <img
+              src="/pics/portfolio-img/imgi_3_image.png"
+              alt="Shokz Project"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div
+            class="p-6"
+            style="
+              background: linear-gradient(
+                90deg,
+                rgba(227, 241, 240, 1) 0%,
+                rgba(216, 223, 229, 1) 53%,
+                rgba(217, 231, 242, 1) 100%
+              );
+            "
+          >
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Shokz</h3>
+            <p class="text-gray-600">
+              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
+              to Products with Seamless Experience
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2 - Intercity Bus Service -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-[#e5e5e7] p-4">
+            <img
+              src="/pics/portfolio-img/imgi_5_image.png"
+              alt="Shokz Project"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div
+            class="p-6"
+            style="
+              background: linear-gradient(
+                90deg,
+                rgba(227, 241, 240, 1) 0%,
+                rgba(216, 223, 229, 1) 53%,
+                rgba(217, 231, 242, 1) 100%
+              );
+            "
+          >
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Intercity Bus Service
+            </h3>
+            <p class="text-gray-600">
+              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
+              to Products with Seamless Experience
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3 - Fanshawe Veterinary Clinic -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-[#e5e5e7] p-4">
+            <img
+              src="/pics/portfolio-img/imgi_11_image.png"
+              alt="Shokz Project"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div
+            class="p-6"
+            style="
+              background: linear-gradient(
+                90deg,
+                rgba(227, 241, 240, 1) 0%,
+                rgba(216, 223, 229, 1) 53%,
+                rgba(217, 231, 242, 1) 100%
+              );
+            "
+          >
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Fanshawe Veterinary Clinic
+            </h3>
+            <p class="text-gray-600">
+              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
+              to Products with Seamless Experience
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Studies Content -->
+      <div
+        id="caseStudiesContent"
+        class="hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
+        <!-- Case Study 1 - Intercity Bus -->
+        <div
+          class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6"
+        >
+          <div class="flex items-start gap-6">
+            <div class="text-4xl font-bold text-gray-300">01</div>
+            <div class="flex-1">
+              <div class="flex gap-4">
+                <div
+                  class="w-32 h-24 bg-white rounded-lg overflow-hidden shadow-sm"
+                >
+                  <img
+                    src="pics/portfolio-img/imgi_52_image.png"
+                    alt="Intercity Bus Case Study"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">
+                    Intercity Bus
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    In early 2022, IntercityBus sought our help to improve brand
+                    visibility and drive ticket sales amid low social media
+                    presence and website traffic.
+                  </p>
+                  <button
+                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                    style="
+                      background: linear-gradient(
+                        0deg,
+                        rgba(57, 62, 114, 1) 45%,
+                        rgba(90, 99, 190, 1) 100%
+                      );
+                    "
+                  >
+                    Read Case Study →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 - Aarteest -->
+        <div
+          class="bg-gradient-to-br from-pink-50 to-purple-100 rounded-xl p-6"
+        >
+          <div class="flex items-start gap-6">
+            <div class="text-4xl font-bold text-gray-300">02</div>
+            <div class="flex-1">
+              <div class="flex gap-4">
+                <div
+                  class="w-32 h-24 bg-white rounded-lg overflow-hidden shadow-sm"
+                >
+                  <img
+                    src="pics/portfolio-img/imgi_51_image.png"
+                    alt="Aarteest Case Study"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Aarteest</h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Aarteest is an e-commerce business based in Canada that
+                    launched in 2021. They specialize in selling a variety of
+                    hoodies and shirts through...
+                  </p>
+                  <button
+                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                    style="
+                      background: linear-gradient(
+                        0deg,
+                        rgba(57, 62, 114, 1) 45%,
+                        rgba(90, 99, 190, 1) 100%
+                      );
+                    "
+                  >
+                    Read Case Study →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 - Martinco UK Real Estate -->
+        <div class="bg-[#dad9ff] rounded-xl p-6">
+          <div class="flex items-start gap-6">
+            <div class="text-4xl font-bold text-white">03</div>
+            <div class="flex-1">
+              <div class="flex gap-4">
+                <div
+                  class="w-32 h-25 bg-white rounded-lg overflow-hidden shadow-sm"
+                >
+                  <img
+                    src="/pics/portfolio-img/imgi_4_image.png"
+                    alt="Martinco UK Case Study"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">
+                    Martinco UK Real Estate Agency
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    In early 2022, Martinco UK sought our help to boost brand
+                    recognition, increase property inquiries, and improve social
+                    media reach...
+                  </p>
+                  <button
+                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                    style="
+                      background: linear-gradient(
+                        0deg,
+                        rgba(57, 62, 114, 1) 45%,
+                        rgba(90, 99, 190, 1) 100%
+                      );
+                    "
+                  >
+                    Read Case Study →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 4 - Centrum Home Decor -->
+        <div class="bg-[#c3c6e5] rounded-xl p-6">
+          <div class="flex items-start gap-6">
+            <div class="text-4xl font-bold text-white">04</div>
+            <div class="flex-1">
+              <div class="flex gap-4">
+                <div
+                  class="w-32 h-25 bg-white rounded-lg overflow-hidden shadow-sm"
+                >
+                  <img
+                    src="pics/portfolio-img/imgi_6_image.png"
+                    alt="Centrum Home Decor Case Study"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">
+                    Centrum Home Decor
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    In early 2022, Centrum Home Decor sought our help to enhance
+                    their online presence, increase brand visibility, and drive
+                    sales
+                  </p>
+                  <button
+                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                    style="
+                      background: linear-gradient(
+                        0deg,
+                        rgba(57, 62, 114, 1) 45%,
+                        rgba(90, 99, 190, 1) 100%
+                      );
+                    "
+                  >
+                    Read Case Study →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      class="max-w-full mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#f2f2fc]"
+    >
+      <!-- Left Container -->
+      <div class="flex flex-col justify-center">
+        <p class="text-sm font-semibold text-indigo-700 tracking-wide mb-2">
+          GET IN TOUCH —
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <span class="text-gray-900">Get the</span>
+          <span
+            class="text-[#696ec9]"
+            style="font-family: 'Hanken Grotesk', sans-serif"
+          >
+            Digital Support You Need to Succeed. </span
+          ><br />
+          <span class="text-gray-900">Feel free to contact!</span>
+        </h2>
+
+        <p class="text-gray-600 mb-6">
+          We’re happy to answer any questions you may have. Reach out to us, and
+          let’s discuss how we can help you achieve your goals.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="space-y-4 mb-6">
+          <!-- Phone -->
+          <div class="flex items-center space-x-3">
+            <img
+              src="/pics/index-img/imgi_30_default.png"
+              alt="Phone Logo"
+              class="w-8 h-8 bg-indigo-100 p-2 rounded-lg"
+            />
+            <p class="text-gray-700 font-medium">
+              Call us at: <br />
+              <span class="text-gray-500">+1 (647) 936-8001</span>
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center space-x-3">
+            <img
+              src="/pics/index-img/imgi_31_default.png"
+              alt="Email Logo"
+              class="w-8 h-8 bg-indigo-100 p-2 rounded-lg"
+            />
+            <p class="text-gray-700 font-medium">
+              Email <br />
+              <span class="text-gray-500">info@waoonet.com</span>
+            </p>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center space-x-3">
+            <img
+              src="/pics/index-img/location.png"
+              alt="Location Logo"
+              class="w-8 h-8 bg-indigo-100 p-2 rounded-lg"
+            />
+            <p class="text-gray-700 font-medium">
+              Global Locations <br />
+              <span class="text-gray-500">Canada, United States, Pakistan</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <button
+          class="bg-[#666ed3] text-white text-sm px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition max-w-[280px]"
+        >
+          SCHEDULE APPOINTMENT
+        </button>
+
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-4 mt-6">
+          <p class="text-gray-700 font-medium">Follow us</p>
+
+          <!-- Facebook Logo -->
+          <a href="#" class="bg-indigo-100 p-2 rounded-full">
+            <img
+              src="/pics/index-img/imgi_32_default.png"
+              alt="Facebook"
+              class="w-5 h-5"
+            />
+          </a>
+
+          <!-- Instagram Logo -->
+          <a href="#" class="bg-indigo-100 p-2 rounded-full">
+            <img
+              src="/pics/index-img/imgi_53_default.png"
+              alt="Instagram"
+              class="w-5 h-5"
+            />
+          </a>
+
+          <!-- Google Logo -->
+          <a href="#" class="bg-indigo-100 p-2 rounded-full">
+            <img
+              src="/pics/index-img/imgi_34_default.png"
+              alt="GitHub"
+              class="w-5 h-5"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="relative bg-white shadow-lg rounded-lg p-8 mt-8 border-t-4 border-[#7176c2] pb-16"
+      >
+        <!-- Top Right Logo Placeholder -->
+        <img
+          src="/pics/index-img/imgi_62_cta-form-bg-top.png"
+          alt="Logo"
+          class="absolute top-0 right-0 w-70 h-50"
+        />
+
+        <h3 class="text-gray-800 font-semibold mb-6">
+          Please fill in the information below
+        </h3>
+
+        <!-- Form -->
+        <form class="space-y-4">
+          <input
+            type="text"
+            placeholder="First Name *"
+            class="w-full border rounded-md p-3 focus:ring-2 focus:ring-indigo-400 mt-6"
+          />
+          <input
+            type="text"
+            placeholder="Last Name *"
+            class="w-full border rounded-md p-3 focus:ring-2 focus:ring-indigo-400"
+          />
+          <input
+            type="text"
+            placeholder="Phone *"
+            class="w-full border rounded-md p-3 focus:ring-2 focus:ring-indigo-400"
+          />
+          <input
+            type="email"
+            placeholder="Email *"
+            class="w-full border rounded-md p-3 focus:ring-2 focus:ring-indigo-400"
+          />
+          <textarea
+            placeholder="Message"
+            rows="4"
+            class="w-full border rounded-md p-3 focus:ring-2 focus:ring-indigo-400"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="bg-[#666ed2] w-full text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <!-- Bottom Left Logo Placeholder -->
+        <img
+          src="/pics/index-img/imgi_63_cta-form-bg-bottom.png"
+          alt="Logo"
+          class="absolute bottom-0 left-0 w-50 h-30"
+        />
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-[#232a56] text-white overflow-hidden min-h-[400px]"
+    >
+      <!-- Background Pattern Left -->
+      <div
+        class="absolute left-0 top-0 bottom-0 w-1/4 bg-no-repeat bg-contain"
+        style="
+          background-image: url('/pics/index-img/imgi_64_footer-bg-left.png');
+        "
+      ></div>
+
+      <!-- Background Pattern Right -->
+      <div
+        class="absolute right-0 top-0 bottom-0 w-1/4 bg-no-repeat bg-contain"
+        style="
+          background-image: url('/pics/index-img/imgi_65_footer-bg-right.png');
+        "
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative max-w-full mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <!-- Logo + About -->
+        <div>
+          <img
+            src="/pics/index-img/waoonet-logo.webp"
+            alt="Logo"
+            class="w-40 mb-4"
+          />
+          <p class="text-gray-300 mb-6">
+            Innovative web development, UI/UX design, and digital marketing
+            solutions to elevate your online presence.
+          </p>
+          <div class="flex items-center space-x-4 mb-6">
+            <p class="text-gray-200 font-medium">Follow us</p>
+            <a href="#" class="bg-indigo-900 p-2 rounded-full">
+              <img
+                src="/pics/index-img/imgi_32_default.png"
+                class="w-5 h-5"
+                alt="Facebook"
+              />
+            </a>
+            <a href="#" class="bg-indigo-900 p-2 rounded-full">
+              <img
+                src="/pics/index-img/imgi_53_default.png"
+                class="w-5 h-5"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#" class="bg-indigo-900 p-2 rounded-full">
+              <img
+                src="/pics/index-img/imgi_34_default.png"
+                class="w-5 h-5"
+                alt="Google"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div>
+          <h3 class="text-indigo-300 font-semibold mb-4">Useful Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-indigo-400">About Us</a></li>
+            <li><a href="#" class="hover:text-indigo-400">Services</a></li>
+            <li><a href="#" class="hover:text-indigo-400">Portfolio</a></li>
+            <li><a href="#" class="hover:text-indigo-400">Blogs</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-indigo-300 font-semibold mb-4">Contact</h3>
+
+          <!-- Phone -->
+          <p class="flex items-center mb-3">
+            <img
+              src="/pics/index-img/imgi_30_default.png"
+              alt="Phone"
+              class="w-5 h-5 mr-2"
+            />
+            +1 (647) 936-8001
+          </p>
+
+          <!-- Email -->
+          <p class="flex items-center mb-3">
+            <img
+              src="/pics/index-img/imgi_31_default.png"
+              alt="Email"
+              class="w-5 h-5 mr-2"
+            />
+            info@waoonet.com
+          </p>
+
+          <!-- Location -->
+          <p class="flex items-center mb-4">
+            <img
+              src="/pics/index-img/location.png"
+              alt="Location"
+              class="w-5 h-5 mr-2"
+            />
+            Canada, United States, Pakistan
+          </p>
+
+          <a
+            href="#"
+            class="group inline-flex items-center bg-indigo-500 text-white px-5 py-2 rounded-lg shadow-md mt-4"
+          >
+            Contact Us
+            <img
+              src="/pics/index-img/imgi_58_default.png"
+              alt="Arrow"
+              class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </a>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-indigo-300 font-semibold mb-4">Newsletter</h3>
+          <p class="text-gray-300 mb-4">
+            Sign up for the Waoonet newsletter to get the latest updates.
+          </p>
+          <div class="flex flex-col space-y-3">
+            <input
+              type="email"
+              placeholder="Enter your Email*"
+              class="p-3 rounded-md w-full text-black outline-none bg-white"
+            />
+            <button
+              class="bg-indigo-500 hover:bg-indigo-600 px-5 py-3 rounded-md font-semibold text-white w-full"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="border-t border-gray-500 text-gray-300 text-sm flex flex-col md:flex-row justify-between items-center px-6 py-4 relative"
+      >
+        <p>Copyright Waoonet - All Rights Reserved.</p>
+        <div class="flex space-x-6 mt-2 md:mt-0">
+          <a href="#" class="hover:text-indigo-400">Terms & Conditions</a>
+          <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+          <a href="#" class="hover:text-indigo-400">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const webProjectsTab = document.getElementById("webProjectsTab");
+      const caseStudiesTab = document.getElementById("caseStudiesTab");
+      const webProjectsContent = document.getElementById("webProjectsContent");
+      const caseStudiesContent = document.getElementById("caseStudiesContent");
+
+      function showWebProjects() {
+        webProjectsTab.classList.add("bg-indigo-500", "text-white");
+        webProjectsTab.classList.remove("bg-gray-200", "text-gray-700");
+        caseStudiesTab.classList.add("bg-gray-200", "text-gray-700");
+        caseStudiesTab.classList.remove("bg-indigo-500", "text-white");
+
+        webProjectsContent.classList.remove("hidden");
+        caseStudiesContent.classList.add("hidden");
+      }
+
+      function showCaseStudies() {
+        caseStudiesTab.classList.add("bg-indigo-500", "text-white");
+        caseStudiesTab.classList.remove("bg-gray-200", "text-gray-700");
+        webProjectsTab.classList.add("bg-gray-200", "text-gray-700");
+        webProjectsTab.classList.remove("bg-indigo-500", "text-white");
+
+        caseStudiesContent.classList.remove("hidden");
+        webProjectsContent.classList.add("hidden");
+      }
+
+      webProjectsTab.addEventListener("click", showWebProjects);
+      caseStudiesTab.addEventListener("click", showCaseStudies);
+    </script>
+  </body>
+</html>
