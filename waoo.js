@@ -67,5 +67,3 @@
           .classList.add("bg-[#666ed3]", "text-white");
       }
    
-
- 
