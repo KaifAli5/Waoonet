@@ -136,363 +136,88 @@
         </div>
       </div>
     </section>
-
-    <div class="max-w-7xl mx-auto mb-[12rem] mt-[20px] px-[20px]">
-      <!-- Header with Tabs -->
-      <div class="flex justify-between items-start mb-8">
-        <div>
-          <h1 class="text-5xl font-bold text-gray-800 leading-tight">
-            Embracing the Future of<br />
-            <span class="text-[#656ed4]">Our Work</span>
-          </h1>
-        </div>
-        <div class="flex gap-4">
-          <button
-            id="webProjectsTab"
-            class="px-6 py-3 bg-[#656ed4] text-white rounded-lg font-medium transition-colors hover:bg-indigo-600"
-          >
-            Web Projects
-          </button>
-          <button
-            id="caseStudiesTab"
-            class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-300"
-          >
-            Case Studies
-          </button>
-        </div>
+    <div class="w-full flex flex-col items-center px-6 py-10">
+      <!-- Large Banner -->
+      <div class="w-full max-w-6xl">
+        <img
+          src="/pics/target-img/imgi_3_image.png"
+          alt="Project Banner"
+          class="w-full rounded-lg shadow-lg"
+        />
       </div>
 
-      <!-- Web Projects Content -->
-      <div
-        id="webProjectsContent"
-        class="grid grid-cols-1 md:grid-cols-3 gap-8"
-      >
-        <!-- Project 1 - Shokz -->
-        <div
-          class="relative h-64 bg-[#e5e5e7] p-4 group"
-          data-text="Shokz Project: Modern E-Commerce Website"
-        >
-          <!-- Main Image -->
-          <img
-            src="/pics/portfolio-img/imgi_3_image.png"
-            alt="Shokz Project"
-            class="w-full h-full object-cover rounded-lg"
-          />
+      <!-- Gray Line -->
+      <div class="w-full max-w-6xl border-b border-gray-300 my-6"></div>
 
-          <!-- Overlay (hidden until hover) -->
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-center px-4 opacity-0 transition-opacity duration-300"
-          >
-            <!-- Dynamic Text -->
-            <p class="text-lg font-semibold"></p>
-
-            <!-- Top Right Linked Image -->
-            <a href="/target1-page.html">
-              <img
-                src="/pics/portfolio-img/imgi_8_arrowz.png"
-                alt="Link Icon"
-                class="absolute top-3 right-3 w-10 h-10 cursor-pointer"
-              />
-            </a>
+      <!-- Two Column Section -->
+      <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Left Container -->
+        <div class="md:col-span-2 space-y-6">
+          <div>
+            <h3 class="text-xl font-bold text-[#666ed3] mb-2">About Project</h3>
+            <p class="text-gray-700">
+              The Shokz E-commerce Website is a dynamic and user-friendly
+              platform designed to showcase and sell cutting-edge audio
+              products. Built with a focus on seamless navigation and modern
+              design, the website enhances the customer experience by offering
+              an intuitive layout, responsive functionality, and optimized
+              performance.
+            </p>
           </div>
 
-          <div
-            class="absolute bottom-[-148px] left-[-0px] right-[-0px] p-5"
-            style="
-              background: linear-gradient(
-                90deg,
-                rgba(227, 241, 240, 1) 0%,
-                rgba(216, 223, 229, 1) 53%,
-                rgba(217, 231, 242, 1) 100%
-              );
-            "
-          >
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Shokz</h3>
-            <p class="text-gray-600">
-              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
-              to Products with Seamless Experience
+          <div>
+            <h3 class="text-xl font-bold text-[#666ed3] mb-2">Challenge</h3>
+            <p class="text-gray-700">
+              Creative client needed a new look for their website, so we
+              undertook a complete revamp. The goal was to infuse more vibrancy
+              into the overall theme while refining the interface...
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#666ed3] mb-2">Client Review</h3>
+            <p class="text-gray-700">
+              The Waoonet team’s agile and iterative approach to web design and
+              development has been exceptional. The new website looks amazing...
             </p>
           </div>
         </div>
 
-        <!-- Project 2 - Intercity Bus Service -->
+        <!-- Right Container (Form-like Info Box) -->
         <div
-          class="relative h-64 bg-[#e5e5e7] p-4 group"
-          data-text="Shokz Project: Modern E-Commerce Website"
+          class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 space-y-4"
         >
-          <!-- Main Image -->
-          <img
-            src="/pics/portfolio-img/imgi_5_image.png"
-            alt="Shokz Project"
-            class="w-full h-full object-cover rounded-lg"
-          />
-
-          <!-- Overlay (hidden until hover) -->
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-center px-4 opacity-0 transition-opacity duration-300"
+          <h3 class="text-lg font-bold text-gray-800">
+            Shokz | Electronics Brand
+          </h3>
+          <p class="text-sm text-gray-600">
+            <strong>Dedicated Team Resource:</strong><br />
+            1 Designer<br />
+            2 Developers<br />
+            1 Project Manager
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Client Location:</strong> UK
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Project Duration:</strong> 6 Months
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Technology:</strong><br />
+            ReactJs, AngularJs, NodeJs, PHP, HTML, CSS
+          </p>
+          <a
+            href="/"
+            class="block w-full text-center bg-[#666ed3] text-white py-2 rounded-md font-semibold hover:bg-indigo-500 transition"
           >
-            <!-- Dynamic Text -->
-            <p class="text-lg font-semibold"></p>
-
-            <!-- Top Right Linked Image -->
-            <a href="/target4-page.html">
-              <img
-                src="/pics/portfolio-img/imgi_8_arrowz.png"
-                alt="Link Icon"
-                class="absolute top-3 right-3 w-10 h-10 cursor-pointer"
-              />
-            </a>
-          </div>
-
-          <div
-            class="absolute bottom-[-148px] left-[-0px] right-[-0px] p-5"
-            style="
-              background: linear-gradient(
-                90deg,
-                rgba(227, 241, 240, 1) 0%,
-                rgba(216, 223, 229, 1) 53%,
-                rgba(217, 231, 242, 1) 100%
-              );
-            "
-          >
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Shokz</h3>
-            <p class="text-gray-600">
-              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
-              to Products with Seamless Experience
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 3 - Fanshawe Veterinary Clinic -->
-        <div
-          class="relative h-64 bg-[#e5e5e7] p-4 group"
-          data-text="Fanshawe Veterinary Clinic"
-        >
-          <!-- Main Image -->
-          <img
-            src="/pics/portfolio-img/imgi_11_image.png"
-            alt="Fanshawe Veterinary Clinic"
-            class="w-full h-full object-cover rounded-lg"
-          />
-
-          <!-- Overlay (hidden until hover) -->
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-center px-4 opacity-0 transition-opacity duration-300"
-          >
-            <!-- Dynamic Text -->
-            <p class="text-lg font-semibold"></p>
-
-            <!-- Top Right Linked Image -->
-            <a href="target2-page.html">
-              <img
-                src="/pics/portfolio-img/imgi_8_arrowz.png"
-                alt="Link Icon"
-                class="absolute top-3 right-3 w-10 h-10 cursor-pointer"
-              />
-            </a>
-          </div>
-
-          <!-- Gradient Text Container (overlayed on image) -->
-          <div
-            class="absolute bottom-[-148px] left-[-0px] right-[-0px] p-5"
-            style="
-              background: linear-gradient(
-                90deg,
-                rgba(227, 241, 240, 1) 0%,
-                rgba(216, 223, 229, 1) 53%,
-                rgba(217, 231, 242, 1) 100%
-              );
-            "
-          >
-            <h3 class="text-xl font-bold text-gray-800 mb-2">
-              Fanshawe Veterinary Clinic
-            </h3>
-            <p class="text-gray-600">
-              An Emerging Online Shopping Hub: A Marketplace Connecting Buyers
-              to Products with Seamless Experience
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Case Studies Content -->
-      <div
-        id="caseStudiesContent"
-        class="hidden grid grid-cols-1 md:grid-cols-2 gap-8"
-      >
-        <!-- Case Study 1 - Intercity Bus -->
-        <div
-          class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6"
-        >
-          <div class="flex items-start gap-6">
-            <div class="text-4xl font-bold text-gray-300">01</div>
-            <div class="flex-1">
-              <div class="flex gap-4">
-                <div
-                  class="w-32 h-24 bg-white rounded-lg overflow-hidden shadow-sm"
-                >
-                  <img
-                    src="pics/portfolio-img/imgi_52_image.png"
-                    alt="Intercity Bus Case Study"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-lg font-bold text-gray-800 mb-2">
-                    Intercity Bus
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-3">
-                    In early 2022, IntercityBus sought our help to improve brand
-                    visibility and drive ticket sales amid low social media
-                    presence and website traffic.
-                  </p>
-                  <button
-                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    style="
-                      background: linear-gradient(
-                        0deg,
-                        rgba(57, 62, 114, 1) 45%,
-                        rgba(90, 99, 190, 1) 100%
-                      );
-                    "
-                  >
-                    Read Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 2 - Aarteest -->
-        <div
-          class="bg-gradient-to-br from-pink-50 to-purple-100 rounded-xl p-6"
-        >
-          <div class="flex items-start gap-6">
-            <div class="text-4xl font-bold text-gray-300">02</div>
-            <div class="flex-1">
-              <div class="flex gap-4">
-                <div
-                  class="w-32 h-24 bg-white rounded-lg overflow-hidden shadow-sm"
-                >
-                  <img
-                    src="pics/portfolio-img/imgi_51_image.png"
-                    alt="Aarteest Case Study"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-lg font-bold text-gray-800 mb-2">Aarteest</h3>
-                  <p class="text-sm text-gray-600 mb-3">
-                    Aarteest is an e-commerce business based in Canada that
-                    launched in 2021. They specialize in selling a variety of
-                    hoodies and shirts through...
-                  </p>
-                  <button
-                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    style="
-                      background: linear-gradient(
-                        0deg,
-                        rgba(57, 62, 114, 1) 45%,
-                        rgba(90, 99, 190, 1) 100%
-                      );
-                    "
-                  >
-                    Read Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 3 - Martinco UK Real Estate -->
-        <div class="bg-[#dad9ff] rounded-xl p-6">
-          <div class="flex items-start gap-6">
-            <div class="text-4xl font-bold text-white">03</div>
-            <div class="flex-1">
-              <div class="flex gap-4">
-                <div
-                  class="w-32 h-25 bg-white rounded-lg overflow-hidden shadow-sm"
-                >
-                  <img
-                    src="/pics/portfolio-img/imgi_4_image.png"
-                    alt="Martinco UK Case Study"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-lg font-bold text-gray-800 mb-2">
-                    Martinco UK Real Estate Agency
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-3">
-                    In early 2022, Martinco UK sought our help to boost brand
-                    recognition, increase property inquiries, and improve social
-                    media reach...
-                  </p>
-                  <button
-                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    style="
-                      background: linear-gradient(
-                        0deg,
-                        rgba(57, 62, 114, 1) 45%,
-                        rgba(90, 99, 190, 1) 100%
-                      );
-                    "
-                  >
-                    Read Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 4 - Centrum Home Decor -->
-        <div class="bg-[#c3c6e5] rounded-xl p-6">
-          <div class="flex items-start gap-6">
-            <div class="text-4xl font-bold text-white">04</div>
-            <div class="flex-1">
-              <div class="flex gap-4">
-                <div
-                  class="w-32 h-25 bg-white rounded-lg overflow-hidden shadow-sm"
-                >
-                  <img
-                    src="pics/portfolio-img/imgi_6_image.png"
-                    alt="Centrum Home Decor Case Study"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-lg font-bold text-gray-800 mb-2">
-                    Centrum Home Decor
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-3">
-                    In early 2022, Centrum Home Decor sought our help to enhance
-                    their online presence, increase brand visibility, and drive
-                    sales
-                  </p>
-                  <button
-                    class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    style="
-                      background: linear-gradient(
-                        0deg,
-                        rgba(57, 62, 114, 1) 45%,
-                        rgba(90, 99, 190, 1) 100%
-                      );
-                    "
-                  >
-                    Read Case Study →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+            View Live Site
+          </a>
         </div>
       </div>
     </div>
+
     <section
-      class="max-w-full mx-auto px-6 mt-24 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#f2f2fc]"
+      class="max-w-full mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#f2f2fc]"
     >
       <!-- Left Container -->
       <div class="flex flex-col justify-center">
@@ -808,51 +533,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const webProjectsTab = document.getElementById("webProjectsTab");
-      const caseStudiesTab = document.getElementById("caseStudiesTab");
-      const webProjectsContent = document.getElementById("webProjectsContent");
-      const caseStudiesContent = document.getElementById("caseStudiesContent");
-
-      function showWebProjects() {
-        webProjectsTab.classList.add("bg-indigo-500", "text-white");
-        webProjectsTab.classList.remove("bg-gray-200", "text-gray-700");
-        caseStudiesTab.classList.add("bg-gray-200", "text-gray-700");
-        caseStudiesTab.classList.remove("bg-indigo-500", "text-white");
-
-        webProjectsContent.classList.remove("hidden");
-        caseStudiesContent.classList.add("hidden");
-      }
-
-      function showCaseStudies() {
-        caseStudiesTab.classList.add("bg-indigo-500", "text-white");
-        caseStudiesTab.classList.remove("bg-gray-200", "text-gray-700");
-        webProjectsTab.classList.add("bg-gray-200", "text-gray-700");
-        webProjectsTab.classList.remove("bg-indigo-500", "text-white");
-
-        caseStudiesContent.classList.remove("hidden");
-        webProjectsContent.classList.add("hidden");
-      }
-
-      webProjectsTab.addEventListener("click", showWebProjects);
-      caseStudiesTab.addEventListener("click", showCaseStudies);
-    </script>
-    <script>
-      document.querySelectorAll(".group").forEach((container) => {
-        const overlay = container.querySelector("div"); // overlay div
-        const textEl = overlay.querySelector("p"); // text inside overlay
-        const dynamicText = container.getAttribute("data-text");
-
-        container.addEventListener("mouseenter", () => {
-          textEl.textContent = dynamicText;
-          overlay.style.opacity = "1";
-        });
-
-        container.addEventListener("mouseleave", () => {
-          overlay.style.opacity = "0";
-        });
-      });
-    </script>
   </body>
 </html>
