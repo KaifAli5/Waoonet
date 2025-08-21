@@ -1,5 +1,6 @@
+// Index Page and aboutUS...................................................
+//Moving Slider 
 
-//Moving Slider
 
   let currentIndex = 0;
   const slider = document.getElementById("slider");
@@ -22,7 +23,7 @@
   }
 
 
-        // Select all containers with overlays
+        // Select all containers with overlays Used in index,services
         document.querySelectorAll(".group").forEach((container) => {
           const overlay = container.querySelector("div");
           const textEl = container.querySelector("p");
@@ -37,3 +38,34 @@
             overlay.style.opacity = "0";
           });
         });
+
+
+// Used in the AboutUS page ............................................................
+        // <!-- JavaScript for Tabs -->
+    
+      function showTab(tab) {
+        // Hide all content
+        document.getElementById("content-who").classList.add("hidden");
+        document.getElementById("content-story").classList.add("hidden");
+        document.getElementById("content-mission").classList.add("hidden");
+
+        // Reset tab styles
+        document
+          .getElementById("tab-who")
+          .classList.remove("bg-[#666ed3]", "text-white");
+        document
+          .getElementById("tab-story")
+          .classList.remove("bg-[#666ed3]", "text-white");
+        document
+          .getElementById("tab-mission")
+          .classList.remove("bg-[#666ed3]", "text-white");
+
+        // Show active content
+        document.getElementById("content-" + tab).classList.remove("hidden");
+        document
+          .getElementById("tab-" + tab)
+          .classList.add("bg-[#666ed3]", "text-white");
+      }
+   
+
+ 

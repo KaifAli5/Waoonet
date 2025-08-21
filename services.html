@@ -945,23 +945,7 @@
   </div>
 </footer>
 
+<script src="waoo.js"></script>
 
-<script>
-        // Select all containers with overlays
-        document.querySelectorAll(".group").forEach((container) => {
-          const overlay = container.querySelector("div");
-          const textEl = container.querySelector("p");
-          const dynamicText = container.getAttribute("data-text");
-
-          container.addEventListener("mouseenter", () => {
-            textEl.textContent = dynamicText;
-            overlay.style.opacity = "1";
-          });
-
-          container.addEventListener("mouseleave", () => {
-            overlay.style.opacity = "0";
-          });
-        });
-    </script>
   </body>
 </html>
