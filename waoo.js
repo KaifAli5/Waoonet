@@ -43,27 +43,22 @@
 // Used in the AboutUS page ............................................................
         // <!-- JavaScript for Tabs -->
     
-      function showTab(tab) {
-        // Hide all content
-        document.getElementById("content-who").classList.add("hidden");
-        document.getElementById("content-story").classList.add("hidden");
-        document.getElementById("content-mission").classList.add("hidden");
+     function showTab(tab) {
+  // Hide all content
+  document.getElementById("content-who").classList.add("hidden");
+  document.getElementById("content-story").classList.add("hidden");
+  document.getElementById("content-mission").classList.add("hidden");
 
-        // Reset tab styles
-        document
-          .getElementById("tab-who")
-          .classList.remove("bg-[#666ed3]", "text-white");
-        document
-          .getElementById("tab-story")
-          .classList.remove("bg-[#666ed3]", "text-white");
-        document
-          .getElementById("tab-mission")
-          .classList.remove("bg-[#666ed3]", "text-white");
+  // Reset tab styles
+  ["who", "story", "mission"].forEach((id) => {
+    document.getElementById("tab-" + id).classList.remove("bg-[#666ed3]", "text-white");
+    document.getElementById("tab-" + id).classList.add("text-[#4a444a]"); // set text black/gray
+  });
 
-        // Show active content
-        document.getElementById("content-" + tab).classList.remove("hidden");
-        document
-          .getElementById("tab-" + tab)
-          .classList.add("bg-[#666ed3]", "text-white");
-      }
+  // Show active content
+  document.getElementById("content-" + tab).classList.remove("hidden");
+  document.getElementById("tab-" + tab).classList.add("bg-[#666ed3]", "text-white");
+  document.getElementById("tab-" + tab).classList.remove("text-[#4a444a]");
+}
+
    
