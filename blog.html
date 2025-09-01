@@ -47,19 +47,22 @@
     >
       <!-- Navigation Bar -->
       <nav
-        class="bg-custom-gradient py-4 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between shadow-lg relative z-50"
+        class="bg-custom-gradient py-4 px-4 md:px-8 flex flex-row items-center justify-between shadow-lg relative z-50"
       >
-        <div class="flex items-center mb-4 md:mb-0">
+        <!-- Logo -->
+        <div class="flex items-center">
           <img
-            src="/pics/portfolio-img/imgi_21_image.png"
+            src="/pics/index-img/waoonet-logo.webp"
             alt="WaooNet Logo"
             width="128"
             height="40"
             class="h-10 w-auto"
           />
         </div>
+
+        <!-- Nav Links (Desktop only) -->
         <ul
-          class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-lg font-medium mb-4 md:mb-0 relative"
+          class="hidden md:flex flex-row items-center gap-8 text-lg font-medium"
           style="font-family: 'Hanken Grotesk', sans-serif"
         >
           <li>
@@ -99,7 +102,8 @@
           </li>
         </ul>
 
-        <div class="flex flex-col sm:flex-row gap-3">
+        <!-- Buttons (Desktop only) -->
+        <div class="hidden md:flex flex-row gap-3">
           <button
             class="bg-transparent text-white font-hanken-grotesk py-2 px-5 rounded-md transition-colors duration-200 border border-white"
           >
@@ -111,21 +115,130 @@
             Contact Now
           </button>
         </div>
+
+        <!-- Hamburger (Mobile only) -->
+        <button id="hamburger" class="md:hidden flex items-center text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </nav>
+
+      <!-- Fullscreen Drawer Menu -->
+      <div
+        id="drawer"
+        class="fixed inset-0 bg-[#1a1a2e] text-white transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col p-8"
+        style="font-family: 'Hanken Grotesk', sans-serif"
+      >
+        <!-- Close Button -->
+        <button id="close-drawer" class="absolute top-6 right-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Drawer Links (Left Aligned) -->
+        <ul class="flex flex-col gap-6 text-2xl font-semibold mt-16">
+          <li>
+            <a href="index.html" class="hover:text-gray-300 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html" class="hover:text-gray-300 transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="hover:text-gray-300 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="portfolio.html"
+              class="hover:text-gray-300 transition-colors"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="hover:text-gray-300 transition-colors active"
+              >Blog</a
+            >
+          </li>
+        </ul>
+
+        <!-- Drawer Buttons (Side by Side) -->
+        <div class="flex gap-4 mt-10">
+          <button
+            class="bg-transparent border border-white text-white font-hanken-grotesk py-3 px-6 rounded-md transition-colors duration-200"
+          >
+            Free Consultation
+          </button>
+          <button
+            class="bg-[#4b4a96] hover:bg-[#6b6ab3] text-white font-hanken-grotesk rounded-md transition-colors duration-200 py-3 px-6 shadow-[0_0_10px_#6b6ab3] hover:shadow-[0_0_15px_#6b6ab3]"
+          >
+            Contact Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Drawer Script -->
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const drawer = document.getElementById("drawer");
+        const closeDrawer = document.getElementById("close-drawer");
+
+        hamburger.addEventListener("click", () => {
+          drawer.classList.remove("translate-x-full");
+          drawer.classList.add("translate-x-0");
+        });
+
+        closeDrawer.addEventListener("click", () => {
+          drawer.classList.remove("translate-x-0");
+          drawer.classList.add("translate-x-full");
+        });
+      </script>
       <!-- Divider -->
       <div class="w-full h-[1px] bg-white"></div>
 
       <!-- Hero Image on the right -->
       <div class="w-full flex justify-end p-10 relative z-10">
         <img
-          src="/pics/portfolio-img/imgi_2_project-hero-img.png"
+          src="/pics/blog-img/imgi_2_blog-hero-img.png"
           alt="Hero Image"
-          class="h-auto w-auto"
+          class="h-auto w-auto opacity-15 sm:opacity-100"
         />
       </div>
 
       <div
-        class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4"
+        class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4 mt-12 sm:mt-0"
       >
         <h1
           class="text-4xl md:text-5xl font-bold text-white mb-4"
